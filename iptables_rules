@@ -23,3 +23,4 @@ COMMIT
 
 # sudo bash -c 'echo "net.ipv4.conf.all.forwarding=1" >> /etc/sysctl.conf'; sudo sysctl -p
 # iptables -t nat -A POSTROUTING -o eth0 -s 192.168.3.0/4 -j MASQUERADE
+# iptables -t nat -A PREROUTING -i eth0 -p tcp -m tcp --dport 8080 -j DNAT --to-destination 192.168.3.10:80

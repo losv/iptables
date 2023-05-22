@@ -1,0 +1,4 @@
+sudo systemctl stop firewalld
+sudo yum install iptables iptables-services -y
+sudo bash -c 'echo "net.ipv4.conf.all.forwarding=1" >> /etc/sysctl.conf'; sudo sysctl -p
+sudo iptables -t nat -A POSTROUTING ! -d 192.168.3.0/24 -o eth0 -j MASQUERADE; 

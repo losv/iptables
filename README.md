@@ -1,6 +1,10 @@
 1.	реализовать knocking port
   нужно скачать файл ююю
-    1.	ююю установка софта
-    2.	ююю настройка iptables через восстановления
-    3.	ююю скрипт knocking.sh
-    4.  ююю подключение к хосту ./knock.sh XXX.XXX.XXX.XXXX 1111 2222 3333
+    1.	установить на centralRouter софт и остановить firewalld. скачав и запустив скрипт ....
+    
+    2.	Настройка iptables через восстановления. Cкачав и запустив скрипт iptables_rules
+        командой iptables-restore < iptables_rules
+        
+    3.	Для подключения к centralRouter нужно скачать файлик knocking.sh
+        и запустив его
+        chmod +x knock.sh && ./knock.sh XXX.XXX.XXX.XXXX 1111 2222 3333
